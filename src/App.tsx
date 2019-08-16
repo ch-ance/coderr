@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import './App.scss';
-import Post from './components/Post';
 import MainContent from './components/MainContent/index';
 import SideBar from './components/SideBar/index'
 const PostsData: IPosts[] = require("./PostsData.json").posts
