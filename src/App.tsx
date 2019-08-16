@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import './App.scss';
 import Post from './components/Post';
 import MainContent from './components/MainContent/index';
+import SideBar from './components/SideBar/index'
 const PostsData: IPosts[] = require("./PostsData.json").posts
+const UserData: IUser = require("./UserData.json").user
 
 interface IPosts {
   username: string;
@@ -11,10 +13,15 @@ interface IPosts {
   id: number;
 }
 
+interface IUser {
+  username: string;
+}
+
 const App: React.FC = () => {
 
   return (
     <div className="app-container">
+      <SideBar user={UserData}/>
       <MainContent posts={PostsData} />
     </div>
   );

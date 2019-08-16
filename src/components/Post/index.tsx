@@ -12,7 +12,6 @@ interface Props {
 const Post: React.FC<Props> = post => {
     return (
         <div className="post-container">
-            
             <SyntaxHighlighter language={post.language}>
                 {post.code}
             </SyntaxHighlighter>
