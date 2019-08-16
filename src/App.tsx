@@ -1,24 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import './App.scss';
+import Post from './components/Post';
+import { string } from 'prop-types';
+const PostsData: IPosts[] = require("./PostsData.json").posts
+
+interface IPosts {
+  username: string;
+  code: string;
+  id: number;
+}
 
 const App: React.FC = () => {
+
+  useEffect(() => {
+    console.log(PostsData);
+  })
+
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Coderr</h1>
       </header>
+      {PostsData.map(eachPost => {
+        return <Post id={eachPost["id"]} />
+      })}
     </div>
   );
 }
