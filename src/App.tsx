@@ -23,7 +23,7 @@ const App: React.FC = () => {
         <h1>Coderr</h1>
       </header>
       {PostsData.map(eachPost => {
-        return <Post id={eachPost["id"]} />
+        return <Post username={eachPost.username} code={eachPost.code} id={eachPost["id"]} />
       })}
     </div>
   );
