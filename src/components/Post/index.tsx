@@ -5,22 +5,20 @@ import SyntaxHighlighter from "react-syntax-highlighter";
 interface Props {
     username: string;
     code: string;
+    language: string;
     id: number;
 }
 
-const Post: React.FC<Props> = props => {
+const Post: React.FC<Props> = post => {
     return (
         <div className="post-container">
             
-            <SyntaxHighlighter language="javascript">
-                {props.code}
+            <SyntaxHighlighter language={post.language}>
+                {post.code}
             </SyntaxHighlighter>
-
-            {/* <h2>Post # {props.id}</h2>
-            <p>{props.code}</p>
             <p>
-                {Date.now()} - {props.username}
-            </p> */}
+                August 15th - {post.username}
+            </p>
         </div>
     );
 };

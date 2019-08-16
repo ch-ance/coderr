@@ -2,17 +2,20 @@
     "posts": [
         {
             "username": "Chance",
-            "code": "console.log('Hello')",
+            "code": "console.log('Hello world')",
+            "language": "javascript",
             "id": "1"
         },
         {
             "username": "Katie",
             "code": "while True:\n\tprint('my man')",
+            "language": "python",
             "id": "2"
         },
         {
             "username": "Chance",
             "code": "public static void main(String[] args) { System.out.print('yes') }",
+            "language": "java",
             "id": "3"
         }
     ]
