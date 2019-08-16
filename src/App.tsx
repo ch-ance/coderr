@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.scss';
 import Post from './components/Post';
-import { string } from 'prop-types';
 const PostsData: IPosts[] = require("./PostsData.json").posts
 
 interface IPosts {
@@ -11,11 +10,6 @@ interface IPosts {
 }
 
 const App: React.FC = () => {
-
-  useEffect(() => {
-    console.log(PostsData);
-  })
-
 
   return (
     <div className="App">
