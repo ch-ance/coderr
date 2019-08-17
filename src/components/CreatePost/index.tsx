@@ -1,21 +1,15 @@
 import * as React from "react";
-import { Editor } from "@tinymce/tinymce-react";
+import AceEditor from 'react-ace';
 
 const CreatePost: React.FC = () => {
+
+    const [codeText, setCodeText] = React.useState("");
+
     return (
         <div className="create-post">
             <label>Got Code?</label>
             <br />
-            <Editor
-                apiKey={process.env.REACT_APP_TINYMCE_API_KEY}
-                init={{
-                    plugins: "link image code",
-                    toolbar: " ",
-                }}
-                onChange={() => {
-                    console.log("changing");
-                }}
-            />
+            <AceEditor />
         </div>
     );
 };
