@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Editor } from '@tinymce/tinymce-react';
+import { Editor } from "@tinymce/tinymce-react";
 
 const CreatePost: React.FC = () => {
     return (
@@ -7,15 +7,15 @@ const CreatePost: React.FC = () => {
             <label>Got Code?</label>
             <br />
             <Editor
-        initialValue="<p>This is the initial content of the editor</p>"
-        init={{
-          plugins: 'link image code',
-          toolbar: 'undo redo | bold italic | alignleft aligncenter alignright | code'
-        }}
-        onChange={() => {
-            console.log("changing")
-        }}
-      />
+                apiKey={process.env.REACT_APP_TINYMCE_API_KEY}
+                init={{
+                    plugins: "link image code",
+                    toolbar: " ",
+                }}
+                onChange={() => {
+                    console.log("changing");
+                }}
+            />
         </div>
     );
 };
