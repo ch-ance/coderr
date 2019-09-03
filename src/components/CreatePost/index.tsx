@@ -3,7 +3,7 @@ import AceEditor from 'react-ace';
 
 const CreatePost: React.FC = () => {
 
-    const [codeText, setCodeText] = React.useState("");
+    // const [codeText, setCodeText] = React.useState("");
 
     return (
         <div className="create-post">
