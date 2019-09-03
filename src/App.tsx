@@ -7,7 +7,7 @@ const UserData: IUser = require("./UserData.json").user
 
 interface IPosts {
   username: string;
-  code: string;
+  value: string;
   language: string;
   id: number;
 }
